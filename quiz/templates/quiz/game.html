@@ -1,0 +1,632 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌎 Game Đố Cờ Các Nước</title>
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background:
+          radial-gradient(circle at 10% 10%, #ffe082 0, transparent 25%),
+          radial-gradient(circle at 90% 10%, #81d4fa 0, transparent 25%),
+          radial-gradient(circle at 50% 100%, #c5e1a5 0, transparent 30%),
+          linear-gradient(135deg, #e3f2fd, #fce4ec);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      } /* ========================= GAME CONTAINER ========================= */
+      .game-wrapper {
+        width: 100%;
+        max-width: 750px;
+      }
+      .game-card {
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 30px;
+        padding: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      } /* ========================= HEADER ========================= */
+      .game-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .game-logo {
+        font-size: 45px;
+      }
+      .game-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #1565c0;
+      }
+      .game-subtitle {
+        color: #777;
+        font-size: 1rem;
+      }
+      .score-box {
+        background: #fff3cd;
+        color: #856404;
+        padding: 10px 18px;
+        border-radius: 20px;
+        font-weight: 700;
+        white-space: nowrap;
+      } /* ========================= PROGRESS ========================= */
+      .progress {
+        height: 12px;
+        border-radius: 20px;
+        background: #eeeeee;
+      }
+      .progress-bar {
+        border-radius: 20px;
+        transition: width 0.4s ease;
+      } /* ========================= QUESTION ========================= */
+      .question-box {
+        margin-top: 25px;
+        padding: 25px;
+        background: #f8fbff;
+        border-radius: 25px;
+      }
+      .question {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+      } /* ========================= FLAG ========================= */
+      .flag-container {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 25px;
+        padding: 15px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      }
+      .flag-container img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: contain;
+        border-radius: 12px;
+      } /* ========================= ANSWERS ========================= */
+      .answer-btn {
+        width: 100%;
+        border: none;
+        border-radius: 18px;
+        padding: 15px 20px;
+        margin-bottom: 12px;
+        background: #e3f2fd;
+        color: #1565c0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transition: all 0.2s ease;
+      }
+      .answer-btn:hover:not(:disabled) {
+        transform: translateY(-3px);
+        background: #bbdefb;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.12);
+      }
+      .answer-btn.correct {
+        background: #c8e6c9 !important;
+        color: #2e7d32 !important;
+        border: 2px solid #66bb6a;
+      }
+      .answer-btn.wrong {
+        background: #ffcdd2 !important;
+        color: #c62828 !important;
+        border: 2px solid #ef5350;
+      }
+      .answer-btn:disabled {
+        cursor: not-allowed;
+      } /* ========================= RESULT ========================= */
+      .result-message {
+        min-height: 50px;
+        margin-top: 10px;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+
+      /* ========================= COUNTRY INFO ========================= */
+      .country-info {
+        display: none;
+        margin-top: 18px;
+        padding: 18px 20px;
+        text-align: left;
+        background: #fff8e1;
+        border: 2px solid #ffcc80;
+        border-radius: 18px;
+        animation: infoAppear 0.35s ease;
+      }
+
+      .country-info.show {
+        display: block;
+      }
+
+      .country-info h3 {
+        margin: 0 0 12px;
+        font-size: 1.25rem;
+        color: #1565c0;
+        font-weight: 800;
+      }
+
+      .country-info p {
+        margin: 7px 0;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .country-info .info-icon {
+        display: inline-block;
+        width: 28px;
+      }
+
+      @keyframes infoAppear {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ========================= NEXT BUTTON ========================= */
+      .next-btn {
+        border: none;
+        border-radius: 18px;
+        padding: 12px 30px;
+        margin-top: 10px;
+        background: #42a5f5;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transition: 0.2s;
+      }
+      .next-btn:hover {
+        transform: translateY(-2px);
+        background: #1e88e5;
+      } /* ========================= FINAL SCREEN ========================= */
+      .final-screen {
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .final-emoji {
+        font-size: 80px;
+        margin-bottom: 15px;
+      }
+      .final-score {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1565c0;
+      }
+      .restart-btn {
+        border: none;
+        border-radius: 18px;
+        padding: 13px 30px;
+        background: #66bb6a;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .restart-btn:hover {
+        background: #43a047;
+      } /* ========================= MOBILE ========================= */
+      @media (max-width: 576px) {
+        body {
+          padding: 10px;
+        }
+        .game-card {
+          padding: 20px;
+          border-radius: 22px;
+        }
+        .game-header {
+          align-items: flex-start;
+        }
+        .game-title {
+          font-size: 1.5rem;
+        }
+        .game-subtitle {
+          font-size: 0.9rem;
+        }
+        .game-logo {
+          font-size: 35px;
+        }
+        .score-box {
+          padding: 8px 12px;
+          font-size: 0.9rem;
+        }
+        .question-box {
+          padding: 18px;
+        }
+        .question {
+          font-size: 1.2rem;
+        }
+        .flag-container img {
+          height: 180px;
+        }
+        .answer-btn {
+          font-size: 1rem;
+          padding: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <div class="game-card">
+        <!-- =====================================
+         HEADER
+    ====================================== -->
+
+        <div class="game-header">
+          <div>
+            <div class="game-logo">🌎</div>
+
+            <h1 class="game-title">Game Đố Cờ</h1>
+
+            <div class="game-subtitle">
+              Học về các quốc gia qua trò chơi! 🎮
+            </div>
+          </div>
+
+          <div class="score-box">
+            ⭐
+            <span id="score"> 0 </span>
+
+            điểm
+          </div>
+        </div>
+
+        <!-- =====================================
+         PROGRESS
+    ====================================== -->
+
+        <div class="mb-3">
+          <div class="d-flex justify-content-between mb-1">
+            <small class="fw-bold"> Câu hỏi </small>
+
+            <small class="fw-bold">
+              <span id="questionNumber"> 1 </span>
+
+              /
+
+              <span id="totalQuestions"> 10 </span>
+            </small>
+          </div>
+
+          <div class="progress">
+            <div
+              id="progressBar"
+              class="progress-bar bg-primary"
+              style="width: 10%"
+            ></div>
+          </div>
+        </div>
+
+        <!-- =====================================
+         GAME AREA
+    ====================================== -->
+
+        <div id="gameArea">
+          <div class="question-box text-center">
+            <!-- QUESTION -->
+
+            <div class="question">🧐 Đây là quốc kỳ của nước nào?</div>
+
+            <!-- FLAG -->
+
+            <div class="flag-container">
+              <img id="flagImage" src="" alt="Quốc kỳ" />
+            </div>
+
+            <!-- ANSWERS -->
+
+            <div id="answersContainer">
+              <!-- JavaScript sẽ tạo 3 đáp án -->
+            </div>
+
+            <!-- RESULT -->
+
+            <div id="resultMessage" class="result-message"></div>
+
+            <!-- COUNTRY INFORMATION -->
+
+            <div id="countryInfo" class="country-info" aria-live="polite">
+              <h3>🌍 Thông tin quốc gia</h3>
+              <p>
+                <span class="info-icon">🏳️</span>
+                <strong>Quốc gia:</strong>
+                <span id="countryName"></span>
+              </p>
+              <p>
+                <span class="info-icon">🏛️</span>
+                <strong>Thủ đô:</strong>
+                <span id="capitalName"></span>
+              </p>
+              <p>
+                <span class="info-icon">🌎</span>
+                <strong>Châu lục:</strong>
+                <span id="continentName"></span>
+              </p>
+            </div>
+
+            <!-- NEXT -->
+
+            <button
+              id="nextButton"
+              class="next-btn d-none"
+              onclick="nextQuestion()"
+            >
+              Câu tiếp theo ➜
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ flags|json_script:"flags-data" }}
+
+    <!-- JAVASCRIPT -->
+    <script>
+      /* ================================================== 1. LẤY DỮ LIỆU TỪ DJANGO ================================================== */
+      const allFlags = JSON.parse(
+        document.getElementById("flags-data").textContent,
+      );
+      console.log("Số quốc gia:", allFlags.length);
+      console.log("Danh sách quốc gia:", allFlags);
+      /* ================================================== 2. CẤU HÌNH GAME ================================================== */
+      const TOTAL_QUESTIONS = 20;
+      const score_correct = 5;
+      let questions = [];
+      let currentQuestion = 0;
+      let score = 0;
+      let answered = false;
+      // Khai báo âm thanh khi chọn đáp án
+      const correctSound = new Audio("{% static 'sounds/correct.mp3' %}");
+      const wrongSound = new Audio("{% static 'sounds/wrong.mp3' %}");
+      /* ================================================== 3. HÀM XÁO TRỘN MẢNG ================================================== */
+      function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+      /* ================================================== 4. TẠO 10 CÂU HỎI ================================================== */
+      function createQuestions() {
+        /* Nếu database có ít hơn 3 quốc gia thì không thể tạo 3 đáp án. */
+        if (allFlags.length < 3) {
+          document.getElementById("gameArea").innerHTML =
+            ` <div class="question-box text-center"> <div class="final-emoji"> 😢 </div> <h2> Chưa đủ dữ liệu! </h2> <p> Database cần ít nhất <strong>3 quốc gia</strong> để chơi game. </p> </div> `;
+          return;
+        }
+        /* Lấy danh sách quốc gia ngẫu nhiên. */
+        questions = shuffle(allFlags).slice(
+          0,
+          Math.min(TOTAL_QUESTIONS, allFlags.length),
+        );
+        /* Cập nhật tổng số câu. */
+        document.getElementById("totalQuestions").innerText = questions.length;
+        /* Hiển thị câu đầu tiên. */
+        showQuestion();
+      }
+      /* ================================================== 5. TẠO 2 ĐÁP ÁN SAI ================================================== */
+      function getWrongAnswers(correctFlag) {
+        const wrongAnswers = allFlags.filter(
+          (flag) => flag.id !== correctFlag.id,
+        );
+        return shuffle(wrongAnswers).slice(0, 2);
+      }
+      /* ================================================== 6. HIỂN THỊ CÂU HỎI ================================================== */
+      function showQuestion() {
+        answered = false;
+        /* Lấy câu hỏi hiện tại. */
+        const question = questions[currentQuestion];
+        /* Hiển thị số câu. */
+        document.getElementById("questionNumber").innerText =
+          currentQuestion + 1;
+        /* Cập nhật progress bar. */ const progress =
+          ((currentQuestion + 1) / questions.length) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+        /* Hiển thị hình quốc kỳ. */
+        document.getElementById("flagImage").src =
+          "{% static '' %}" + question.url_flag;
+        // document.getElementById("flagImage").src =
+        //   "/static/" + question.url_flag;
+        document.getElementById("flagImage").alt =
+          "Quốc kỳ " + question.country_name;
+        /* Tạo đáp án. */ const wrongAnswers = getWrongAnswers(question);
+        /* Gộp đáp án đúng + 2 đáp án sai. */ const answers = shuffle([
+          question,
+          ...wrongAnswers,
+        ]);
+        /* Container đáp án. */ const container =
+          document.getElementById("answersContainer");
+        container.innerHTML = "";
+        /* Tạo 3 button. */ answers.forEach(function (answer) {
+          const button = document.createElement("button");
+          button.className = "answer-btn";
+          button.innerText = answer.country_name;
+          /* Lưu ID quốc gia vào button. */ button.dataset.id = answer.id;
+          /* Xử lý khi người chơi chọn. */ button.onclick = function () {
+            checkAnswer(button, question);
+          };
+          container.appendChild(button);
+        });
+        /* Xóa thông báo cũ. */
+        document.getElementById("resultMessage").innerHTML = "";
+
+        /* Ẩn thông tin quốc gia của câu trước. */
+        document.getElementById("countryInfo").classList.remove("show");
+        document.getElementById("countryName").innerText = "";
+        document.getElementById("capitalName").innerText = "";
+        document.getElementById("continentName").innerText = "";
+
+        /* Ẩn nút câu tiếp theo. */
+        document.getElementById("nextButton").classList.add("d-none");
+      }
+      /* ================================================== 7. KIỂM TRA ĐÁP ÁN ================================================== */
+      function checkAnswer(selectedButton, correctAnswer) {
+        /* Không cho chọn nhiều lần. */
+        if (answered) {
+          return;
+        }
+
+        answered = true;
+
+        /* Lấy tất cả button. */
+        const buttons = document.querySelectorAll(".answer-btn");
+
+        /* Khóa tất cả đáp án. */
+        buttons.forEach(function (button) {
+          button.disabled = true;
+        });
+
+        /* ID đáp án người chơi chọn. */
+        const selectedId = Number(selectedButton.dataset.id);
+
+        /* Hiển thị thông tin quốc gia sau khi trả lời. */
+        showCountryInfo(correctAnswer);
+
+        /* Kiểm tra đáp án. */
+        if (selectedId === Number(correctAnswer.id)) {
+          /* ĐÚNG */
+          selectedButton.classList.add("correct");
+
+          /* Cộng điểm. */
+          score += score_correct;
+          document.getElementById("score").innerText = score;
+
+          document.getElementById("resultMessage").innerHTML =
+            "🎉 Chính xác! Bạn thật giỏi! ⭐";
+          document.getElementById("resultMessage").style.color = "#2e7d32";
+
+          correctSound.currentTime = 0;
+          correctSound.play().catch(function () {});
+        } else {
+          /* SAI */
+          selectedButton.classList.add("wrong");
+
+          /* Tìm và đánh dấu đáp án đúng. */
+          buttons.forEach(function (button) {
+            if (Number(button.dataset.id) === Number(correctAnswer.id)) {
+              button.classList.add("correct");
+            }
+          });
+
+          document.getElementById("resultMessage").innerHTML =
+            "😊 Chưa đúng! Đáp án đúng là " +
+            "<strong>" +
+            correctAnswer.country_name +
+            "</strong>";
+          document.getElementById("resultMessage").style.color = "#c62828";
+
+          wrongSound.currentTime = 0;
+          wrongSound.play().catch(function () {});
+        }
+
+        /* Hiện nút câu tiếp theo. */
+        document.getElementById("nextButton").classList.remove("d-none");
+      }
+
+      /* ================================================== HIỂN THỊ THÔNG TIN QUỐC GIA ================================================== */
+      function showCountryInfo(country) {
+        document.getElementById("countryName").innerText =
+          country.country_name || "Chưa có dữ liệu";
+
+        document.getElementById("capitalName").innerText =
+          country.capital_name || "Chưa có dữ liệu";
+
+        document.getElementById("continentName").innerText =
+          country.continent || "Chưa có dữ liệu";
+
+        document.getElementById("countryInfo").classList.add("show");
+      }
+
+      /* ================================================== 8. CÂU HỎI TIẾP THEO ================================================== */ function nextQuestion() {
+        currentQuestion++;
+        /* Nếu còn câu hỏi. */ if (currentQuestion < questions.length) {
+          showQuestion();
+        } else {
+          showFinalResult();
+        }
+      }
+      /* ================================================== 9. KẾT QUẢ CUỐI GAME ================================================== */ function showFinalResult() {
+        let total = questions.length * score_correct;
+        let percentage = Math.round((score / total) * 100);
+        let message = "";
+        if (percentage === 100) {
+          message = "🏆 Tuyệt vời! Bạn đã trả lời đúng tất cả!";
+        } else if (percentage >= 70) {
+          message = "🌟 Rất giỏi! Bạn biết rất nhiều quốc gia!";
+        } else if (percentage >= 50) {
+          message = "😊 Khá tốt! Hãy chơi thêm để nhớ nhiều quốc kỳ hơn nhé!";
+        } else {
+          message = "💪 Đừng buồn! Chơi thêm vài lần bạn sẽ giỏi hơn!";
+        }
+        /* Thay toàn bộ game bằng màn hình kết quả. */ document.getElementById(
+          "gameArea",
+        ).innerHTML =
+          ` <div class="question-box"> <div class="final-screen"> <div class="final-emoji"> 🏆 </div> <h2 class="fw-bold"> Hoàn thành! </h2> <p class="fs-5 mt-3"> ${message} </p> <div class="final-score mt-3"> ⭐ ${score} điểm </div> <p class="mt-2"> Bạn trả lời đúng khoảng <strong> ${percentage}% </strong> </p> <button class="restart-btn mt-3" onclick="restartGame()" > 🔄 Chơi lại </button> </div> </div> `;
+      }
+      /* ================================================== 10. CHƠI LẠI ================================================== */ function restartGame() {
+        score = 0;
+        currentQuestion = 0;
+        answered = false;
+        document.getElementById("score").innerText = "0";
+        /* Tạo lại câu hỏi ngẫu nhiên. */ document.getElementById(
+          "gameArea",
+        ).innerHTML = ` <div class="question-box text-center">
+              <div class="question"> 🧐 Đây là quốc kỳ của nước nào? </div>
+              <div class="flag-container">
+                <img id="flagImage" src="" alt="Quốc kỳ">
+              </div>
+              <div id="answersContainer"></div>
+              <div id="resultMessage" class="result-message"></div>
+
+              <div id="countryInfo" class="country-info" aria-live="polite">
+                <h3>🌍 Thông tin quốc gia</h3>
+                <p>
+                  <span class="info-icon">🏳️</span>
+                  <strong>Quốc gia:</strong>
+                  <span id="countryName"></span>
+                </p>
+                <p>
+                  <span class="info-icon">🏛️</span>
+                  <strong>Thủ đô:</strong>
+                  <span id="capitalName"></span>
+                </p>
+                <p>
+                  <span class="info-icon">🌎</span>
+                  <strong>Châu lục:</strong>
+                  <span id="continentName"></span>
+                </p>
+              </div>
+
+              <button id="nextButton" class="next-btn d-none" onclick="nextQuestion()">
+                Câu tiếp theo ➜
+              </button>
+            </div> `;
+        createQuestions();
+      }
+      /* ================================================== 11. KHỞI ĐỘNG GAME ================================================== */ createQuestions();
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
