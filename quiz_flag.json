@@ -1,0 +1,972 @@
+[
+{
+  "model": "quiz.flag",
+  "pk": 1,
+  "fields": {
+    "country_name": "Việt Nam",
+    "capital_name": "Hà Nội",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_vietnam.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 2,
+  "fields": {
+    "country_name": "Nhật Bản",
+    "capital_name": "Tokyo",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_nhatban.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 3,
+  "fields": {
+    "country_name": "Hàn Quốc",
+    "capital_name": "Seoul",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_hanquoc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 4,
+  "fields": {
+    "country_name": "Pháp",
+    "capital_name": "Paris",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_phap.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 5,
+  "fields": {
+    "country_name": "Đức",
+    "capital_name": "Berlin",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_duc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 6,
+  "fields": {
+    "country_name": "Hoa Kỳ",
+    "capital_name": "Washington",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_my.jpg"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 7,
+  "fields": {
+    "country_name": "Trung Quốc",
+    "capital_name": "Bắc Kinh",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_trungquoc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 8,
+  "fields": {
+    "country_name": "Ấn Độ",
+    "capital_name": "New Delhi",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_ando.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 9,
+  "fields": {
+    "country_name": "Thái Lan",
+    "capital_name": "Bangkok",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_thailan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 10,
+  "fields": {
+    "country_name": "Indonesia",
+    "capital_name": "Jakarta",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_indonesia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 11,
+  "fields": {
+    "country_name": "Singapore",
+    "capital_name": "Singapore",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_singapore.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 13,
+  "fields": {
+    "country_name": "Philippines",
+    "capital_name": "Manila",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_philippines.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 14,
+  "fields": {
+    "country_name": "Malaysia",
+    "capital_name": "Kuala Lumpur",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_malaysia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 15,
+  "fields": {
+    "country_name": "Ý (Italia)",
+    "capital_name": "Roma",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_y.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 16,
+  "fields": {
+    "country_name": "Tây Ban Nha",
+    "capital_name": "Madrid",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_taybannha.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 17,
+  "fields": {
+    "country_name": "Anh (Vương quốc Anh)",
+    "capital_name": "London",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_anh.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 18,
+  "fields": {
+    "country_name": "Nga",
+    "capital_name": "Mát-xcơ-va (Moscow)",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_nga.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 19,
+  "fields": {
+    "country_name": "Bồ Đào Nha",
+    "capital_name": "Lisbon",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_bodaonha.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 20,
+  "fields": {
+    "country_name": "Hà Lan",
+    "capital_name": "Amsterdam",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_halan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 21,
+  "fields": {
+    "country_name": "Bỉ",
+    "capital_name": "Brussels",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_bi.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 22,
+  "fields": {
+    "country_name": "Thụy Sĩ",
+    "capital_name": "Bern",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_thuysi.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 23,
+  "fields": {
+    "country_name": "Canada",
+    "capital_name": "Ottawa",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_canada.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 24,
+  "fields": {
+    "country_name": "Mexico",
+    "capital_name": "Mexico",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_mexico.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 25,
+  "fields": {
+    "country_name": "Cuba",
+    "capital_name": "Havana",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_cuba.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 26,
+  "fields": {
+    "country_name": "Jamaica",
+    "capital_name": "Kingston",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_jamaica.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 27,
+  "fields": {
+    "country_name": "Costa Rica",
+    "capital_name": "San José",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_CostaRica.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 28,
+  "fields": {
+    "country_name": "Panama",
+    "capital_name": "Panama",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Panama.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 29,
+  "fields": {
+    "country_name": "Guatemala",
+    "capital_name": "Guatemala",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Guatemala.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 30,
+  "fields": {
+    "country_name": "Honduras",
+    "capital_name": "Tegucigalpa",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Honduras.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 31,
+  "fields": {
+    "country_name": "Cộng hòa Dominica",
+    "capital_name": "Santo Domingo",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Dominica.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 32,
+  "fields": {
+    "country_name": "Ai Cập",
+    "capital_name": "Cairo",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_aicap.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 33,
+  "fields": {
+    "country_name": "Nam Phi",
+    "capital_name": "Pretoria",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_namphi.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 34,
+  "fields": {
+    "country_name": "Nigeria",
+    "capital_name": "Abuja",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Nigeria.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 35,
+  "fields": {
+    "country_name": "Kenya",
+    "capital_name": "Nairobi",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Kenya.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 36,
+  "fields": {
+    "country_name": "Ma-rốc (Morocco)",
+    "capital_name": "Rabat",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_maroc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 37,
+  "fields": {
+    "country_name": "Ethiopia",
+    "capital_name": "Addis Ababa",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Ethiopia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 38,
+  "fields": {
+    "country_name": "Ghana",
+    "capital_name": "Accra",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Ghana.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 39,
+  "fields": {
+    "country_name": "Algeria",
+    "capital_name": "Algiers",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Algeria.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 40,
+  "fields": {
+    "country_name": "Senegal",
+    "capital_name": "Dakar",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Senegal.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 41,
+  "fields": {
+    "country_name": "Tanzania",
+    "capital_name": "Dodoma",
+    "continent": "Châu Phi",
+    "url_flag": "images/flag_Tanzania.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 42,
+  "fields": {
+    "country_name": "Úc (Australia)",
+    "capital_name": "Canberra",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_uc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 43,
+  "fields": {
+    "country_name": "New Zealand",
+    "capital_name": "Wellington",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_New Zealand.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 44,
+  "fields": {
+    "country_name": "Papua New Guinea",
+    "capital_name": "Port Moresby",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Papua New Guinea.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 45,
+  "fields": {
+    "country_name": "Fiji",
+    "capital_name": "Suva",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Fiji.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 46,
+  "fields": {
+    "country_name": "Samoa",
+    "capital_name": "Apia",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Samoa.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 47,
+  "fields": {
+    "country_name": "Vanuatu",
+    "capital_name": "Port Vila",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Vanuatu.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 48,
+  "fields": {
+    "country_name": "Quần đảo Solomon",
+    "capital_name": "Honiara",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Quần đảo Solomon.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 49,
+  "fields": {
+    "country_name": "Tonga",
+    "capital_name": "Nukuʻalofa",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Tonga.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 50,
+  "fields": {
+    "country_name": "Kiribati",
+    "capital_name": "Tarawa",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Kiribati.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 51,
+  "fields": {
+    "country_name": "Palau",
+    "capital_name": "Ngerulmud",
+    "continent": "Châu Đại Dương",
+    "url_flag": "images/flag_Palau.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 52,
+  "fields": {
+    "country_name": "Lào",
+    "capital_name": "Viêng Chăn",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Lào.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 53,
+  "fields": {
+    "country_name": "Campuchia",
+    "capital_name": "Phnom Penh",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Campuchia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 54,
+  "fields": {
+    "country_name": "Myanmar",
+    "capital_name": "Naypyidaw",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Myanmar.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 55,
+  "fields": {
+    "country_name": "Mông Cổ",
+    "capital_name": "Ulaanbaatar",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Mông Cổ.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 56,
+  "fields": {
+    "country_name": "Ả Rập Xê Út",
+    "capital_name": "Riyadh",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Ả Rập Xê Út.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 57,
+  "fields": {
+    "country_name": "Các Tiểu vương quốc Ả Rập Thống nhất (UAE)",
+    "capital_name": "Abu Dhabi",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_uae.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 58,
+  "fields": {
+    "country_name": "Qatar",
+    "capital_name": "Doha",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Qatar.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 59,
+  "fields": {
+    "country_name": "Thổ Nhĩ Kỳ",
+    "capital_name": "Ankara",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Thổ Nhĩ Kỳ.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 60,
+  "fields": {
+    "country_name": "Iran",
+    "capital_name": "Tehran",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Iran.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 61,
+  "fields": {
+    "country_name": "Bangladesh",
+    "capital_name": "Dhaka",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Bangladesh.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 62,
+  "fields": {
+    "country_name": "Thụy Điển",
+    "capital_name": "Stockholm",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Thụy Điển.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 63,
+  "fields": {
+    "country_name": "Nauy",
+    "capital_name": "Oslo",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Nauy.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 64,
+  "fields": {
+    "country_name": "Đan Mạch",
+    "capital_name": "Copenhagen",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Đan Mạch.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 65,
+  "fields": {
+    "country_name": "Phần Lan",
+    "capital_name": "Helsinki",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Phần Lan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 66,
+  "fields": {
+    "country_name": "Áo",
+    "capital_name": "Vienna",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_ao.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 67,
+  "fields": {
+    "country_name": "Hy Lạp",
+    "capital_name": "Athens",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Hy Lạp.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 68,
+  "fields": {
+    "country_name": "Ba Lan",
+    "capital_name": "Warsaw",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Ba Lan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 69,
+  "fields": {
+    "country_name": "Cộng hòa Séc",
+    "capital_name": "Prague",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Cộng hòa Séc.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 70,
+  "fields": {
+    "country_name": "Hungary",
+    "capital_name": "Budapest",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Hungary.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 71,
+  "fields": {
+    "country_name": "Romania",
+    "capital_name": "Bucharest",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Romania.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 72,
+  "fields": {
+    "country_name": "Brazil",
+    "capital_name": "Brasília",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Brazil.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 73,
+  "fields": {
+    "country_name": "Argentina",
+    "capital_name": "Buenos Aires",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Argentina.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 74,
+  "fields": {
+    "country_name": "Colombia",
+    "capital_name": "Bogotá",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Colombia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 75,
+  "fields": {
+    "country_name": "Peru",
+    "capital_name": "Lima",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Peru.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 76,
+  "fields": {
+    "country_name": "Chile",
+    "capital_name": "Santiago",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Chile.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 77,
+  "fields": {
+    "country_name": "Pakistan",
+    "capital_name": "Islamabad",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Pakistan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 78,
+  "fields": {
+    "country_name": "Nepal",
+    "capital_name": "Kathmandu",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Nepal.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 79,
+  "fields": {
+    "country_name": "Sri Lanka",
+    "capital_name": "Sri Jayawardenepura Kotte",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Sri Lanka.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 80,
+  "fields": {
+    "country_name": "Kazakhstan",
+    "capital_name": "Astana",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Kazakhstan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 81,
+  "fields": {
+    "country_name": "Uzbekistan",
+    "capital_name": "Tashkent",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Uzbekistan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 82,
+  "fields": {
+    "country_name": "Turkmenistan",
+    "capital_name": "Ashgabat",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Turkmenistan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 83,
+  "fields": {
+    "country_name": "Kyrgyzstan",
+    "capital_name": "Bishkek",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Kyrgyzstan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 84,
+  "fields": {
+    "country_name": "Tajikistan",
+    "capital_name": "Dushanbe",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Tajikistan.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 85,
+  "fields": {
+    "country_name": "Triều Tiên (Bắc Triều Tiên)",
+    "capital_name": "Bình Nhưỡng (Pyongyang)",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Triều Tiên (Bắc Triều Tiên).png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 86,
+  "fields": {
+    "country_name": "Oman",
+    "capital_name": "Muscat",
+    "continent": "Châu Á",
+    "url_flag": "images/flag_Oman.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 87,
+  "fields": {
+    "country_name": "Ukraine",
+    "capital_name": "Kyiv",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Ukraine.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 88,
+  "fields": {
+    "country_name": "Ireland",
+    "capital_name": "Dublin",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Ireland.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 89,
+  "fields": {
+    "country_name": "Croatia",
+    "capital_name": "Zagreb",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Croatia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 90,
+  "fields": {
+    "country_name": "Iceland",
+    "capital_name": "Reykjavik",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Iceland.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 91,
+  "fields": {
+    "country_name": "Slovakia",
+    "capital_name": "Bratislava",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Slovakia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 92,
+  "fields": {
+    "country_name": "Slovenia",
+    "capital_name": "Ljubljana",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Slovenia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 93,
+  "fields": {
+    "country_name": "Serbia",
+    "capital_name": "Belgrade",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Serbia.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 94,
+  "fields": {
+    "country_name": "Bulgaria",
+    "capital_name": "Sofia",
+    "continent": "Châu Âu",
+    "url_flag": "images/flag_Bulgaria.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 95,
+  "fields": {
+    "country_name": "Venezuela",
+    "capital_name": "Caracas",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Venezuela.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 96,
+  "fields": {
+    "country_name": "Ecuador",
+    "capital_name": "Quito",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Ecuador.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 97,
+  "fields": {
+    "country_name": "Uruguay",
+    "capital_name": "Montevideo",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Uruguay.png"
+  }
+},
+{
+  "model": "quiz.flag",
+  "pk": 98,
+  "fields": {
+    "country_name": "Paraguay",
+    "capital_name": "Asunción",
+    "continent": "Châu Mỹ",
+    "url_flag": "images/flag_Paraguay.png"
+  }
+}
+]
